@@ -33,6 +33,7 @@ import com.phei.netty.protocol.netty.codec.NettyMessageDecoder;
 import com.phei.netty.protocol.netty.codec.NettyMessageEncoder;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * @author Lilinfeng
@@ -73,6 +74,7 @@ public class NettyServer {
     }
 
     public static void main(String[] args) throws Exception {
-	new NettyServer().bind();
+		PropertyConfigurator.configure("resources/log4j.properties");
+		new NettyServer().bind();
     }
 }
