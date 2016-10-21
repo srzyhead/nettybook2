@@ -74,7 +74,7 @@ public class NettyServer {
     }
 
     public static void main(String[] args) throws Exception {
-		PropertyConfigurator.configure("resources/log4j.properties");
+//		PropertyConfigurator.configure("resources/log4j.properties");
 		new NettyServer().bind();
     }
 }
